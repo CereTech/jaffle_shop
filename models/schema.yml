@@ -7,6 +7,10 @@ models:
     columns:
       - name: customer_id
         description: This is a unique identifier for a customer
+        meta:
+            metrics:
+              number_of_users:
+                type: count
         tests:
           - unique
           - not_null
