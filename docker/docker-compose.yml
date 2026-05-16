@@ -1,7 +1,8 @@
 version: "3.9"
 services:
   dbt:
-    image: fishtownanalytics/dbt:0.21.0
+    image: ghcr.io/dbt-labs/dbt-postgres:1.7.15
+    working_dir: /usr/app
     depends_on:
       - postgres
     volumes:
@@ -13,4 +14,4 @@ services:
     environment:
       POSTGRES_PASSWORD: password
     ports:
-      - "5432:5432"
+      - "7547:5432"
